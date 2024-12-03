@@ -590,12 +590,12 @@ install(DIRECTORY doc/ DESTINATION ${CMAKE_INSTALL_DOCDIR} COMPONENT documentati
 
 configure_package_config_file(
     libxml2-config.cmake.cmake.in libxml2-config.cmake
-    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/libxml2-${PROJECT_VERSION}
+    INSTALL_DESTINATION cmake
 )
 
 install(
     FILES ${CMAKE_CURRENT_BINARY_DIR}/libxml2-config.cmake
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/libxml2-${PROJECT_VERSION}
+    DESTINATION cmake
     COMPONENT development
 )
 
@@ -607,13 +607,13 @@ write_basic_package_version_file(
 
 install(
     FILES ${CMAKE_CURRENT_BINARY_DIR}/libxml2-config-version.cmake
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/libxml2-${PROJECT_VERSION}
+    DESTINATION cmake
     COMPONENT development
 )
 
 install(
     EXPORT LibXml2
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/libxml2-${PROJECT_VERSION}
+    DESTINATION cmake
     NAMESPACE LibXml2::
     FILE libxml2-export.cmake
     COMPONENT development
